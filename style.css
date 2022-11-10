@@ -9,6 +9,12 @@
     font-family: "Poppins";
 }
 
+.svg {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+}
+
 .main {
     display: flex;
     flex-direction: column;
@@ -39,7 +45,9 @@
     font-size: 1.5em;
     border-radius: 30px;
     border: 2px solid red;
+    background-color: white;
     overflow: fit-content;
+    z-index: 1;
 }
 
 .button {
