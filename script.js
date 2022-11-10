@@ -12,13 +12,13 @@ cardContainer.children[i].children[0].textContent = data.forms[0].name
 const generateButton = document.querySelector("#generate");
 const cardContainer = document.querySelector(".card-container");
 
-const randomNum = () => {
-    return Math.floor(Math.random() * 905);
+const randomNum = (maximum) => {
+    return Math.floor(Math.random() * maximum);
 }
 
 generateButton.addEventListener("click", () => {
     for(let i = 0; i < 6; i++) {
-        let pokeNum = randomNum();
+        let pokeNum = randomNum(905);
         fetch('https://pokeapi.co/api/v2/pokemon/' + pokeNum)
         .then((response) => response.json())
         .then((data) => editPokemon(data, i));             
