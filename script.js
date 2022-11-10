@@ -24,6 +24,13 @@ generateButton.addEventListener("click", () => {
 })
 
 const editPokemon = (data, i) => {
-    cardContainer.children[i].children[0].textContent = data.forms[0].name
+    cardContainer.children[i].children[0].textContent = firstLetterCapital(data.forms[0].name);
     cardContainer.children[i].children[1].setAttribute("src", data.sprites.other.home.front_default)
+    if(data.sprites.other.home.front_default === null) {
+        cardContainer.children[i].children[1].setAttribute("src", data.sprites.other["official-artwork"].front_default)
+}
+}
+
+const firstLetterCapital = (str) => {
+    return str[0].toUpperCase() + str.slice(1, str.length); 
 }
