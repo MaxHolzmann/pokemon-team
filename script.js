@@ -5,6 +5,8 @@ https://pokeapi.co/api/v2/pokemon/ditto
 cardContainer.children[i].children[0].textContent = data.forms[0].name
 
 //404 error catch
+
+//catch pokemon with - in name  specficially such as the komomo line
 */ 
 
 const generateButton = document.querySelector("#generate");
@@ -32,5 +34,16 @@ const editPokemon = (data, i) => {
 }
 
 const firstLetterCapital = (str) => {
-    return str[0].toUpperCase() + str.slice(1, str.length); 
+   let string = str[0].toUpperCase() + str.slice(1, str.length); 
+   if(string.includes("-")) {
+    console.log('- found!')
+    string = string.replaceAll("-", " ");
+    const words = string.split(" ");
+    for(let i = 0; i < words.length; i++) {
+        words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+    }
+    return words.join(" ");
+   } else {
+    return string;
+   }
 }
