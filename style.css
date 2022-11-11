@@ -61,6 +61,11 @@
     scale: 1.1;
 }
 
+.card-flip {
+    transform: rotateY(180deg);
+
+}
+
 .card p {
     padding-top: 10px;
 }

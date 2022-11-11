@@ -67,3 +67,11 @@ const firstLetterCapital = (str) => {
 const checkGens = () => {
 
 }
+
+cardContainer.addEventListener("click", (e) => {
+    if(!e.target.classList.contains('card-container')) {
+        //flip here
+    } else {
+        console.log('container')
+    }
+})
