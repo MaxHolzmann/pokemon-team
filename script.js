@@ -6,7 +6,11 @@ cardContainer.children[i].children[0].textContent = data.forms[0].name
 
 //404 error catch
 
+//more information on the card, typing, abilities, etc?? 
+
 //catch pokemon with - in name  specficially such as the komomo line
+
+//card click for info! have info existing on card element, but have it hidden. then take off hide class?? and hide pokemon side?? idk
 */ 
 
 const generateButton = document.querySelector("#generate");
