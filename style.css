@@ -55,6 +55,7 @@
     -moz-box-shadow: -2px 1px 15px -4px rgba(0,0,0,0.62);
     transition: ease-in 0.2s;
     margin: 10px;
+    transition: ease-in 0.2s;
 }
 
 .card:hover {
@@ -62,8 +63,7 @@
 }
 
 .card-flip {
-    transform: rotateY(180deg);
-
+    transform: rotateY(360deg);
 }
 
 .card p {
