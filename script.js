@@ -12,11 +12,23 @@ cardContainer.children[i].children[0].textContent = data.forms[0].name
 const generateButton = document.querySelector("#generate");
 const cardContainer = document.querySelector(".card-container");
 
+const genCheckboxOne = document.querySelector("#gen1")
+const genCheckboxTwo = document.querySelector("#gen2")
+const genCheckboxThree = document.querySelector("#gen3")
+const genCheckboxFour = document.querySelector("#gen4")
+const genCheckboxFive = document.querySelector("#gen5")
+const genCheckboxSix = document.querySelector("#gen6")
+const genCheckboxSeven = document.querySelector("#gen7")
+const genCheckboxEight = document.querySelector("#gen8")
+
+const checkboxes = [genCheckboxOne, genCheckboxTwo, genCheckboxThree, genCheckboxFour, genCheckboxFive, genCheckboxSix, genCheckboxSeven, genCheckboxEight];
+
 const randomNum = (maximum) => {
     return Math.floor(Math.random() * maximum);
 }
 
 generateButton.addEventListener("click", () => {
+    cardContainer.style.display = "flex";
     for(let i = 0; i < 6; i++) {
         let pokeNum = randomNum(905);
         fetch('https://pokeapi.co/api/v2/pokemon/' + pokeNum)
@@ -27,7 +39,7 @@ generateButton.addEventListener("click", () => {
 
 const editPokemon = (data, i) => {
     cardContainer.children[i].children[0].textContent = firstLetterCapital(data.forms[0].name);
-    cardContainer.children[i].children[1].setAttribute("src", data.sprites.other.home.front_default)
+    cardContainer.children[i].children[1].setAttribute("src", data.sprites.other.home.front_default);
     if(data.sprites.other.home.front_default === null) {
         cardContainer.children[i].children[1].setAttribute("src", data.sprites.other["official-artwork"].front_default)
 }
@@ -46,4 +58,8 @@ const firstLetterCapital = (str) => {
    } else {
     return string;
    }
+}
+
+const checkGens = () => {
+
 }

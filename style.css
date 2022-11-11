@@ -20,10 +20,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-size: 1.5em;
 }
 
 .card-container {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     flex-wrap: wrap;
     padding: 20px;
@@ -41,7 +42,7 @@
     justify-content: center;
     text-align: center;
     min-width: 20%;
-    flex-basis: 33%;
+    flex-basis: 30%;
     font-size: 1.5em;
     border-radius: 30px;
     border: 2px solid red;
@@ -50,7 +51,16 @@
     z-index: 1;
 }
 
+.button-container {
+    display: flex;
+
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
 .button {
+    cursor: pointer;
     border-radius: 20px;
     font-size: 1.2em;
     background-color: red;
